@@ -1,0 +1,36 @@
+body {
+  font-family: "Manrope";
+  letter-spacing: 0.5px;
+}
+
+.manrope-bold {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 00;
+  font-style: normal;
+}
+
+/* Sayfalama noktaları */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+  transform: scale(1.2);
+}
+
+/* İleri ve geri butonlar */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover durumları */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: white !important;
+  transform: scale(1.2);
+}
