@@ -21,24 +21,25 @@
 
 <body>
     <!-- ===== LOADING SCREEN ===== -->
-    <div id="page-loader" class="fixed inset-0 z-[9999] bg-black text-white">
-        <!-- AŞAMA 1: LOADING SAYFASI -->
-        <div id="loader-phase-1" class="absolute inset-0 flex flex-col items-center justify-center gap-6">
+
+    <!-- <div id="page-loader" class="fixed inset-0 z-[9999] bg-black text-white"> -->
+    <!-- AŞAMA 1: LOADING SAYFASI -->
+    <!-- <div id="loader-phase-1" class="absolute inset-0 flex flex-col items-center justify-center gap-6">
             <h1 id="loader-text" class="text-2xl sm:text-3xl md:text-5xl font-bold tracking-widest text-[#ccff00]">
                 YÜKLENİYOR <span id="loader-percent">0</span>%
-            </h1>
+            </h1> -->
 
-            <!-- Progress bar -->
-            <div class="w-[70%] max-w-xl h-[4px] bg-white/10 rounded overflow-hidden">
+    <!-- Progress bar -->
+    <!-- <div class="w-[70%] max-w-xl h-[4px] bg-white/10 rounded overflow-hidden">
                 <div id="loader-bar" class="h-full w-0 bg-[#ccff00] transition-[width] duration-75"></div>
-            </div>
+            </div> -->
 
-            <!-- küçük not -->
-            <p class="text-xs sm:text-sm text-white/60 tracking-widest">Wuda Ajansına Hoşgeldiniz</p>
-        </div>
+    <!-- küçük not -->
+    <!-- <p class="text-xs sm:text-sm text-white/60 tracking-widest">Wuda Ajansına Hoşgeldiniz</p>
+        </div> -->
 
-        <!-- AŞAMA 2: PARÇALI REVEAL (5 parça) -->
-        <div id="loader-phase-2" class="absolute inset-0 hidden">
+    <!-- AŞAMA 2: PARÇALI REVEAL (5 parça) -->
+    <!-- <div id="loader-phase-2" class="absolute inset-0 hidden">
             <div class="flex flex-col h-full">
                 <div class="piece flex-1 bg-[#ccff00] translate-y-0 will-change-transform"></div>
                 <div class="piece flex-1 bg-black translate-y-0 will-change-transform"></div>
@@ -46,8 +47,9 @@
                 <div class="piece flex-1 bg-black translate-y-0 will-change-transform"></div>
                 <div class="piece flex-1 bg-[#ccff00] translate-y-0 will-change-transform"></div>
             </div>
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
+
     <!-- ===== LOADING SCREEN ===== -->
 
 
@@ -456,12 +458,253 @@
     <!-- ===== SERVICES SECTION ===== -->
 
     <!-- ============================================================================================================================================   -->
-
     <!-- ===== MISSION SECTION ===== -->
+    <section id="mission" class="relative bg-[#151515] text-white overflow-hidden">
 
-    <!-- ===== MISSION SECTION ===== -->
+        <h4 class="text-md px-4 mb-8 text-[#ccff00] font-semibold tracking-widest text-start md:px-60">//
+            MISSION</h4>
+        <!-- H2 -->
+        <div class="mx-auto w-full max-w-screen-2xl px-6 lg:px-12 ">
+            <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-medium mb-14 leading-snug text-start justify-start md:w-3/4">
+                We create practical products that generate substantial results.
+            </h2>
+        </div>
+
+        <!-- Full-width Video -->
+        <div class="w-3/4 mx-auto mt-10">
+            <!-- 16:9; istersen aspect oranını değiştir -->
+            <div class="relative w-full aspect-[12/5]">
+                <video class="absolute inset-0 w-full h-full object-cover" src="/assets/videos/mission-video.mp4"
+                    autoplay muted loop playsinline controls></video>
+            </div>
+        </div>
+
+        <!-- Content: Left paragraphs + Right progress -->
+        <div class="mx-auto w-full max-w-screen-2xl px-6 lg:px-12 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+                <!-- Left: Two long paragraphs -->
+                <div class="space-y-6">
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        We bridge strategy and execution to ship products that matter. From research and product framing
+                        to
+                        design systems and performance engineering, our teams move fast, validate early, and iterate
+                        with intent.
+                        Results are measured against clear KPIs—growth, retention, and operational efficiency.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Our approach blends qualitative insights with quantitative signals. We prioritize velocity
+                        without sacrificing
+                        craft, ensuring every release is usable, accessible, and measurable. That’s how we turn ideas
+                        into durable,
+                        high-performing products.
+                    </p>
+                </div>
+
+                <!-- Right: Progress Bars -->
+                <div class="space-y-8">
+
+                    <!-- Item -->
+                    <div class="w-full">
+                        <div class="flex items-end justify-between mb-2">
+                            <span class="text-base sm:text-lg">Digital Strategy</span>
+                            <span class="text-sm sm:text-base text-white/80">
+                                <span class="js-pct-text">0</span>%
+                            </span>
+                        </div>
+                        <div class="h-2.5 rounded-full bg-white/10 overflow-hidden">
+                            <div class="js-bar h-full w-0 rounded-full bg-[#ccff00] transition-[width] duration-1000 ease-out"
+                                role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                                data-percent="74"></div>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="w-full">
+                        <div class="flex items-end justify-between mb-2">
+                            <span class="text-base sm:text-lg">UI/UX Design</span>
+                            <span class="text-sm sm:text-base text-white/80">
+                                <span class="js-pct-text">0</span>%
+                            </span>
+                        </div>
+                        <div class="h-2.5 rounded-full bg-white/10 overflow-hidden">
+                            <div class="js-bar h-full w-0 rounded-full bg-[#ccff00] transition-[width] duration-1000 ease-out"
+                                role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                                data-percent="91"></div>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="w-full">
+                        <div class="flex items-end justify-between mb-2">
+                            <span class="text-base sm:text-lg">Product Plannings</span>
+                            <span class="text-sm sm:text-base text-white/80">
+                                <span class="js-pct-text">0</span>%
+                            </span>
+                        </div>
+                        <div class="h-2.5 rounded-full bg-white/10 overflow-hidden">
+                            <div class="js-bar h-full w-0 rounded-full bg-[#ccff00] transition-[width] duration-1000 ease-out"
+                                role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                                data-percent="63"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== /MISSION SECTION ===== -->
 
     <!-- ============================================================================================================================================   -->
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="relative bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <!-- yumuşak doku / noise istersen buraya bg ekleyebilirsin -->
+        </div>
+
+        <div class="relative mx-auto w-full max-w-screen-2xl px-6 lg:px-12 py-24">
+            <!-- Eyebrow -->
+            <p class="text-[#ccff00] tracking-widest text-sm font-semibold mb-6">// ABOUT</p>
+
+            <!-- Heading -->
+            <div class="max-w-3xl">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                    We design, build and scale <span class="border-b-2 border-[#ccff00]">digital products</span>
+                    that people love to use.
+                </h2>
+                <p class="text-gray-400 text-lg mt-6">
+                    Strategy, design and engineering under one roof. We partner with ambitious teams to validate
+                    opportunities, craft usable experiences and ship fast—without compromising quality.
+                </p>
+            </div>
+
+            <!-- Main grid -->
+            <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: copy + bullets + CTA -->
+                <div class="space-y-8">
+                    <div class="space-y-5">
+                        <p class="text-gray-300 leading-relaxed">
+                            From early discovery to post-launch growth, our process blends qualitative insights with
+                            quantitative signals. Accessibility, performance and brand clarity are baked into every
+                            release.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            We work in focused sprints, keep feedback loops tight and measure what matters:
+                            adoption, retention and velocity. That’s how we turn ideas into durable, high-performing
+                            products.
+                        </p>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">1</span>
+                            <span class="text-gray-300">Research-driven strategy & clear success metrics</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">2</span>
+                            <span class="text-gray-300">Design systems that scale across platforms</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">3</span>
+                            <span class="text-gray-300">Performance-first engineering & technical SEO</span>
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#contact" class="relative inline-block px-7 py-3 text-black font-semibold bg-[#ccff00] rounded-lg
+                    transition-transform duration-300 hover:-translate-y-0.5">
+                            Let’s talk →
+                        </a>
+                        <a href="#works"
+                            class="group inline-flex items-center gap-2 text-white/80 hover:text-white transition">
+                            See our work
+                            <span
+                                class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Signature / trust -->
+                    <div class="flex items-center gap-4 pt-2">
+                        <img src="/assets/images/signature.png" alt="Signature" class="h-10 opacity-80" />
+                        <span class="text-sm text-white/60">Founder & Product Lead</span>
+                    </div>
+                </div>
+
+                <!-- Right: image collage -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                        <figure class="col-span-1 aspect-[4/5] rounded-2xl overflow-hidden bg-white/5">
+                            <img src="https://picsum.photos/200"
+                                class="h-full w-full object-cover grayscale hover:grayscale-0 transition"
+                                alt="Studio" />
+                        </figure>
+                        <figure class="col-span-1 aspect-[4/5] rounded-2xl overflow-hidden bg-white/5 translate-y-8">
+                            <img src="https://picsum.photos/200"
+                                class="h-full w-full object-cover grayscale hover:grayscale-0 transition"
+                                alt="Workshop" />
+                        </figure>
+                        <figure class="col-span-2 aspect-[16/9] rounded-2xl overflow-hidden bg-white/5 -translate-y-2">
+                            <img src="https://picsum.photos/200"
+                                class="h-full w-full object-cover grayscale hover:grayscale-0 transition" alt="Team" />
+                        </figure>
+                    </div>
+
+                    <!-- floating badge -->
+                    <div class="absolute -top-6 -right-4 sm:-right-8">
+                        <div
+                            class="bg-[#ccff00] text-black rounded-full px-4 py-2 text-xs font-semibold tracking-wider shadow">
+                            10+ YEARS / 120+ LAUNCHES
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <div class="rounded-2xl border border-white/10 p-6 bg-white/5 backdrop-blur">
+                    <div class="text-4xl font-semibold"><span class="js-stat" data-to="120">0</span>+</div>
+                    <p class="text-white/60 mt-1">Projects shipped</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 p-6 bg-white/5 backdrop-blur">
+                    <div class="text-4xl font-semibold"><span class="js-stat" data-to="35">0</span>%</div>
+                    <p class="text-white/60 mt-1">Avg. conversion lift</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 p-6 bg-white/5 backdrop-blur">
+                    <div class="text-4xl font-semibold"><span class="js-stat" data-to="98">0</span>%</div>
+                    <p class="text-white/60 mt-1">Client retention</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 p-6 bg-white/5 backdrop-blur">
+                    <div class="text-4xl font-semibold"><span class="js-stat" data-to="14">0</span></div>
+                    <p class="text-white/60 mt-1">Industries served</p>
+                </div>
+            </div>
+
+            <!-- Values / mini list -->
+            <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-xl border border-white/10 p-6">
+                    <h3 class="text-xl font-semibold mb-2">Clarity</h3>
+                    <p class="text-white/70">Simple, honest communication and measurable goals in every engagement.</p>
+                </div>
+                <div class="rounded-xl border border-white/10 p-6">
+                    <h3 class="text-xl font-semibold mb-2">Craft</h3>
+                    <p class="text-white/70">Accessible design, robust code and performance by default.</p>
+                </div>
+                <div class="rounded-xl border border-white/10 p-6">
+                    <h3 class="text-xl font-semibold mb-2">Velocity</h3>
+                    <p class="text-white/70">Tight feedback loops, rapid iterations and early validation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== /ABOUT SECTION ===== -->
+
+    <!-- Optional: stat counter on view -->
+
 
 
 
