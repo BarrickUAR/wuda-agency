@@ -21,6 +21,8 @@
 
 <body>
 
+    <!-- ============================================================================================================================================   -->
+
     <!-- ===== HEADER SECTION ===== -->
     <header id="header" class="fixed w-full top-0 left-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-20">
@@ -71,9 +73,8 @@
             </button>
         </div>
     </header>
-    <!-- ===== HEADER SECTION ===== -->
 
-    <!-- ===== MOBILE DRAWER (FULL WIDTH) ===== -->
+    <!-- ===== HAMBURGERMENU ===== -->
     <div id="mobile-drawer" class="fixed inset-0 z-[60] pointer-events-none opacity-0 transition-opacity duration-300"
         aria-hidden="true">
         <!-- Backdrop -->
@@ -140,8 +141,11 @@
             </div>
         </aside>
     </div>
-    <!-- ===== /MOBILE DRAWER ===== -->
+    <!-- ===== HAMBURGERMENU ===== -->
 
+    <!-- ===== HEADER SECTION ===== -->
+
+    <!-- ============================================================================================================================================   -->
 
     <!-- ===== HERO SECTION ===== -->
     <section class="relative w-full h-screen bg-black">
@@ -270,12 +274,10 @@
     </section>
     <!-- ===== HERO SECTION ===== -->
 
-
-
-
+    <!-- ============================================================================================================================================   -->
 
     <!-- =====  WELCOME SECTION =====  -->
-    <section id="welcome" class="py-20 md:py-50 bg-black">
+    <section id="welcome" class="py-20 px-10 md:py-50 bg-black">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
 
             <!-- Sol Taraf -->
@@ -340,15 +342,22 @@
     </section>
     <!-- =====  WELCOME SECTION =====  -->
 
-    <!-- ===== SERVICES SECTION ===== -->
-    <section id="services"
-        class="relative py-24 px-12 mb-14 bg-[#151515] bg-[url('/assets/images/services-image.jpg')] bg-cover bg-center overflow-hidden">
-        <!-- Koyu overlay -->
-        <div class="absolute inset-0 bg-black/70 -z-10"></div>
+    <!-- ============================================================================================================================================   -->
 
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col"></div>
-            <h4 class="text-md text-[#ccff00] font-semibold mb-10 z-50 tracking-widest">// SERVICES</h4>
+    <!-- ===== SERVICES SECTION ===== -->
+    <section id="services" class="relative py-24 mb-14 bg-[#151515] overflow-hidden">
+
+        <!-- BG LAYER (parallax/scale uygulanacak) -->
+        <div id="services-bg"
+            class="absolute inset-0 z-0 bg-[url('/assets/images/services-image.jpg')] bg-cover bg-center will-change-transform">
+        </div>
+
+        <!-- Koyu overlay (bg üstünde, içerik altında) -->
+        <div class="absolute inset-0 z-10 bg-black/70 pointer-events-none"></div>
+
+        <!-- İÇERİK -->
+        <div class="relative z-20 mx-auto w-full max-w-screen-2xl px-6 lg:px-12">
+            <h4 class="text-md text-[#ccff00] font-semibold mb-10 tracking-widest">// SERVICES</h4>
 
             <!-- H2 -->
             <h2 class="text-3xl sm:text-4xl md:text-5xl w-full md:w-1/2 text-white font-semibold mb-24">
@@ -359,8 +368,8 @@
             <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
 
                 <!-- Item 1 -->
-                <article
-                    class="relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300">
+                <article class="service-card reveal-init relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl
+               flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300 cursor-pointer">
                     <!-- Sağ üst büyük ikon -->
                     <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 md:h-24 text-black bg-[#ccff00]"
                         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -377,8 +386,8 @@
                 </article>
 
                 <!-- Item 2 -->
-                <article
-                    class="relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300">
+                <article class="service-card reveal-init relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl
+               flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300 cursor-pointer">
                     <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 md:h-24 text-black bg-[#ccff00]"
                         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
@@ -394,8 +403,8 @@
                 </article>
 
                 <!-- Item 3 -->
-                <article
-                    class="relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300">
+                <article class="service-card reveal-init relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl
+               flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300 cursor-pointer">
                     <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 md:h-24 text-black bg-[#ccff00]"
                         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
@@ -414,6 +423,14 @@
         </div>
     </section>
     <!-- ===== SERVICES SECTION ===== -->
+
+    <!-- ============================================================================================================================================   -->
+
+    <!-- ===== MISSION SECTION ===== -->
+
+    <!-- ===== MISSION SECTION ===== -->
+
+    <!-- ============================================================================================================================================   -->
 
 
 
