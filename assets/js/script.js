@@ -259,91 +259,91 @@
 
 
 // loading screen
-// (function () {
-//     // === Ayarlar ===
-//     const DURATION_SIM_MS = 2200;     // Yüzde sayacının tahmini süre (ms)
-//     const REVEAL_STAGGER = 20;       // Her parçanın gecikmesi (ms)
-//     const REVEAL_LAST_EXTRA = 400;    // Son parça sonrası overlay’i kaldırma gecikmesi (ms)
-//     // =================
+(function () {
+    // === Ayarlar ===
+    const DURATION_SIM_MS = 2200;     // Yüzde sayacının tahmini süre (ms)
+    const REVEAL_STAGGER = 20;       // Her parçanın gecikmesi (ms)
+    const REVEAL_LAST_EXTRA = 400;    // Son parça sonrası overlay’i kaldırma gecikmesi (ms)
+    // =================
 
-//     const root = document.getElementById('page-loader');
-//     const p1 = document.getElementById('loader-phase-1');
-//     const p2 = document.getElementById('loader-phase-2');
-//     const percentEl = document.getElementById('loader-percent');
-//     const barEl = document.getElementById('loader-bar');
-//     const pieces = [];
+    const root = document.getElementById('page-loader');
+    const p1 = document.getElementById('loader-phase-1');
+    const p2 = document.getElementById('loader-phase-2');
+    const percentEl = document.getElementById('loader-percent');
+    const barEl = document.getElementById('loader-bar');
+    const pieces = [];
 
-//     // Parça nodelarını topla (sırayla)
-//     (function collectPieces() {
-//         const nodes = (p2 && p2.querySelectorAll('.piece')) || [];
-//         nodes.forEach(n => pieces.push(n));
-//     })();
+    // Parça nodelarını topla (sırayla)
+    (function collectPieces() {
+        const nodes = (p2 && p2.querySelectorAll('.piece')) || [];
+        nodes.forEach(n => pieces.push(n));
+    })();
 
-//     // ===== AŞAMA 1: % SAYACI =====
-//     let start = performance.now();
-//     let done = false;
-//     let rafId = null;
+    // ===== AŞAMA 1: % SAYACI =====
+    let start = performance.now();
+    let done = false;
+    let rafId = null;
 
-//     function tick(now) {
-//         const t = Math.min(1, (now - start) / DURATION_SIM_MS);
-//         const eased = easeOutCubic(t); // daha “premium” akış
-//         const pct = Math.floor(eased * 100);
-//         percentEl.textContent = pct;
-//         barEl.style.width = pct + '%';
+    function tick(now) {
+        const t = Math.min(1, (now - start) / DURATION_SIM_MS);
+        const eased = easeOutCubic(t); // daha “premium” akış
+        const pct = Math.floor(eased * 100);
+        percentEl.textContent = pct;
+        barEl.style.width = pct + '%';
 
-//         if (t < 1 && !done) {
-//             rafId = requestAnimationFrame(tick);
-//         } else {
-//             finishPhase1();
-//         }
-//     }
+        if (t < 1 && !done) {
+            rafId = requestAnimationFrame(tick);
+        } else {
+            finishPhase1();
+        }
+    }
 
-//     // İsteğe bağlı: Sayfa tamamen yüklendiğinde %’yi hızlıca 100’e taşı
-//     window.addEventListener('load', () => {
-//         if (!done) {
-//             start = performance.now() - (DURATION_SIM_MS * 0.05); // hızlandır
-//         }
-//     });
+    // İsteğe bağlı: Sayfa tamamen yüklendiğinde %’yi hızlıca 100’e taşı
+    window.addEventListener('load', () => {
+        if (!done) {
+            start = performance.now() - (DURATION_SIM_MS * 0.05); // hızlandır
+        }
+    });
 
-//     function finishPhase1() {
-//         done = true;
-//         // Yazıyı ve barı fade-out yap
-//         p1.classList.add('fade-out');
+    function finishPhase1() {
+        done = true;
+        // Yazıyı ve barı fade-out yap
+        p1.classList.add('fade-out');
 
-//         // Aşama 2’ye geç: parçalı reveal
-//         setTimeout(() => {
-//             p1.classList.add('hidden');
-//             p2.classList.remove('hidden');
-//             startPiecesReveal();
-//         }, 450);
-//     }
+        // Aşama 2’ye geç: parçalı reveal
+        setTimeout(() => {
+            p1.classList.add('hidden');
+            p2.classList.remove('hidden');
+            startPiecesReveal();
+        }, 450);
+    }
 
-//     function startPiecesReveal() {
-//         pieces.forEach((piece, i) => {
-//             setTimeout(() => {
-//                 piece.classList.add('reveal');
-//             }, i * REVEAL_STAGGER);
-//         });
+    function startPiecesReveal() {
+        pieces.forEach((piece, i) => {
+            setTimeout(() => {
+                piece.classList.add('reveal');
+            }, i * REVEAL_STAGGER);
+        });
 
-//         // Son parça devreye girdikten kısa süre sonra overlay’i kaldır
-//         const totalRevealTime = (pieces.length - 1) * REVEAL_STAGGER + 900 + REVEAL_LAST_EXTRA;
-//         setTimeout(removeOverlay, totalRevealTime);
-//     }
+        // Son parça devreye girdikten kısa süre sonra overlay’i kaldır
+        const totalRevealTime = (pieces.length - 1) * REVEAL_STAGGER + 900 + REVEAL_LAST_EXTRA;
+        setTimeout(removeOverlay, totalRevealTime);
+    }
 
-//     function removeOverlay() {
-//         root.style.transition = 'opacity .7s ease';
-//         root.style.opacity = '0';
-//         setTimeout(() => root.remove(), 700);
-//     }
+    function removeOverlay() {
+        root.style.transition = 'opacity .7s ease';
+        root.style.opacity = '0';
+        setTimeout(() => root.remove(), 700);
+    }
 
-//     // Easing
-//     function easeOutCubic(x) {
-//         return 1 - Math.pow(1 - x, 3);
-//     }
+    // Easing
+    function easeOutCubic(x) {
+        return 1 - Math.pow(1 - x, 3);
+    }
 
-//     // Başlat
-//     rafId = requestAnimationFrame(tick);
-// })();
+    // Başlat
+    rafId = requestAnimationFrame(tick);
+})();
 // loading screen 
 
 

@@ -21,25 +21,24 @@
 
 <body>
     <!-- ===== LOADING SCREEN ===== -->
-
-    <!-- <div id="page-loader" class="fixed inset-0 z-[9999] bg-black text-white"> -->
-    <!-- AŞAMA 1: LOADING SAYFASI -->
-    <!-- <div id="loader-phase-1" class="absolute inset-0 flex flex-col items-center justify-center gap-6">
+    <div id="page-loader" class="fixed inset-0 z-[9999] bg-black text-white">
+        <!-- AŞAMA 1: LOADING SAYFASI -->
+        <div id="loader-phase-1" class="absolute inset-0 flex flex-col items-center justify-center gap-6">
             <h1 id="loader-text" class="text-2xl sm:text-3xl md:text-5xl font-bold tracking-widest text-[#ccff00]">
                 YÜKLENİYOR <span id="loader-percent">0</span>%
-            </h1> -->
+            </h1>
 
-    <!-- Progress bar -->
-    <!-- <div class="w-[70%] max-w-xl h-[4px] bg-white/10 rounded overflow-hidden">
+            <!-- Progress bar -->
+            <div class="w-[70%] max-w-xl h-[4px] bg-white/10 rounded overflow-hidden">
                 <div id="loader-bar" class="h-full w-0 bg-[#ccff00] transition-[width] duration-75"></div>
-            </div> -->
+            </div>
 
-    <!-- küçük not -->
-    <!-- <p class="text-xs sm:text-sm text-white/60 tracking-widest">Wuda Ajansına Hoşgeldiniz</p>
-        </div> -->
+            <!-- küçük not -->
+            <p class="text-xs sm:text-sm text-white/60 tracking-widest">Wuda Ajansına Hoşgeldiniz</p>
+        </div>
 
-    <!-- AŞAMA 2: PARÇALI REVEAL (5 parça) -->
-    <!-- <div id="loader-phase-2" class="absolute inset-0 hidden">
+        <!-- AŞAMA 2: PARÇALI REVEAL (5 parça) -->
+        <div id="loader-phase-2" class="absolute inset-0 hidden">
             <div class="flex flex-col h-full">
                 <div class="piece flex-1 bg-[#ccff00] translate-y-0 will-change-transform"></div>
                 <div class="piece flex-1 bg-black translate-y-0 will-change-transform"></div>
@@ -47,12 +46,9 @@
                 <div class="piece flex-1 bg-black translate-y-0 will-change-transform"></div>
                 <div class="piece flex-1 bg-[#ccff00] translate-y-0 will-change-transform"></div>
             </div>
-        </div> -->
-    <!-- </div> -->
-
-    <!-- ===== LOADING SCREEN ===== -->
-
-
+        </div>
+    </div>
+    <!-- ===== LOADING SCREEN ===== 
 
     <!-- ============================================================================================================================================   -->
 
@@ -315,7 +311,7 @@
 
             <!-- Sol Taraf -->
             <div class="w-full md:w-1/2">
-                <h4 class="text-md text-[#ccff00] font-semibold mb-10 z-50 tracking-widest">// WELCOME</h4>
+                <h4 class="text-[#ccff00] tracking-widest text-sm font-semibold mb-6">// WELCOME</h4>
 
                 <h2 class="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl text-start mb-8 leading-snug">
                     Transforming <span class="border-b-2 border-[#ccff00]">Brands</span><br>
@@ -390,7 +386,7 @@
 
         <!-- İÇERİK -->
         <div class="relative z-20 mx-auto w-full max-w-screen-2xl px-6 lg:px-12">
-            <h4 class="text-md text-[#ccff00] font-semibold mb-10 tracking-widest">// SERVICES</h4>
+            <h4 class="text-[#ccff00] tracking-widest text-sm font-semibold mb-6">// SERVICES</h4>
 
             <!-- H2 -->
             <h2 class="text-3xl sm:text-4xl md:text-5xl w-full md:w-1/2 text-white font-semibold mb-24">
@@ -461,7 +457,7 @@
     <!-- ===== MISSION SECTION ===== -->
     <section id="mission" class="relative bg-[#151515] text-white overflow-hidden">
 
-        <h4 class="text-md px-4 mb-8 text-[#ccff00] font-semibold tracking-widest text-start md:px-60">//
+        <h4 class="text-[#ccff00] tracking-widest text-sm font-semibold mb-6 text-start md:px-60">//
             MISSION</h4>
         <!-- H2 -->
         <div class="mx-auto w-full max-w-screen-2xl px-6 lg:px-12 ">
@@ -561,7 +557,6 @@
     <!-- ===== ABOUT SECTION ===== -->
     <section id="about" class="relative bg-black text-white overflow-hidden">
         <div class="absolute inset-0 pointer-events-none opacity-20">
-            <!-- yumuşak doku / noise istersen buraya bg ekleyebilirsin -->
         </div>
 
         <div class="relative mx-auto w-full max-w-screen-2xl px-6 lg:px-12 py-24">
@@ -703,7 +698,7 @@
     </section>
     <!-- ===== /ABOUT SECTION ===== -->
 
-    <!-- Optional: stat counter on view -->
+
 
 
 
@@ -719,7 +714,6 @@
 
     <!-- Mouse Line Canvas -->
     <canvas id="cursor-trail" aria-hidden="true"></canvas>
-
 
 </body>
 
