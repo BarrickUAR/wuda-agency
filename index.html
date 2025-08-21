@@ -20,6 +20,37 @@
 </head>
 
 <body>
+    <!-- ===== LOADING SCREEN ===== -->
+    <div id="page-loader" class="fixed inset-0 z-[9999] bg-black text-white">
+        <!-- AŞAMA 1: LOADING SAYFASI -->
+        <div id="loader-phase-1" class="absolute inset-0 flex flex-col items-center justify-center gap-6">
+            <h1 id="loader-text" class="text-2xl sm:text-3xl md:text-5xl font-bold tracking-widest text-[#ccff00]">
+                YÜKLENİYOR <span id="loader-percent">0</span>%
+            </h1>
+
+            <!-- Progress bar -->
+            <div class="w-[70%] max-w-xl h-[4px] bg-white/10 rounded overflow-hidden">
+                <div id="loader-bar" class="h-full w-0 bg-[#ccff00] transition-[width] duration-75"></div>
+            </div>
+
+            <!-- küçük not -->
+            <p class="text-xs sm:text-sm text-white/60 tracking-widest">Wuda Ajansına Hoşgeldiniz</p>
+        </div>
+
+        <!-- AŞAMA 2: PARÇALI REVEAL (5 parça) -->
+        <div id="loader-phase-2" class="absolute inset-0 hidden">
+            <div class="flex flex-col h-full">
+                <div class="piece flex-1 bg-[#ccff00] translate-y-0 will-change-transform"></div>
+                <div class="piece flex-1 bg-black translate-y-0 will-change-transform"></div>
+                <div class="piece flex-1 bg-[#ccff00] translate-y-0 will-change-transform"></div>
+                <div class="piece flex-1 bg-black translate-y-0 will-change-transform"></div>
+                <div class="piece flex-1 bg-[#ccff00] translate-y-0 will-change-transform"></div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== LOADING SCREEN ===== -->
+
+
 
     <!-- ============================================================================================================================================   -->
 
@@ -442,6 +473,9 @@
 
 
 
+
+    <!-- Mouse Line Canvas -->
+    <canvas id="cursor-trail" aria-hidden="true"></canvas>
 
 
 </body>

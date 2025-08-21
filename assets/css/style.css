@@ -57,3 +57,39 @@ html {
   animation: fadeUp 0.8s ease-out forwards;
 }
 /* Wuda Agency Header */
+
+/* Mouse Glow */
+#cursor-trail {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6; /* gerekirse 3–10 arası oyna */
+  mix-blend-mode: screen;
+}
+
+/* Hareket azaltmayı seçen kullanıcılar için kapat */
+@media (prefers-reduced-motion: reduce) {
+  #cursor-trail {
+    display: none;
+  }
+}
+
+/* Mouse Glow */
+
+/* loading screen */
+@keyframes slideUp {
+  to {
+    transform: translateY(-100%);
+  }
+}
+/* Aşama 2’de JS, .piece elemanlarına .reveal sınıfını sırayla ekleyecek */
+.piece.reveal {
+  animation: slideUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+/* Aşama 1 biterken yazıyı ve barı hafifçe kaybedelim */
+.fade-out {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(-6px);
+}
+/* loading screen */
