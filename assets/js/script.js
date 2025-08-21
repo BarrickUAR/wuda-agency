@@ -262,8 +262,8 @@
 (function () {
     // === Ayarlar ===
     const DURATION_SIM_MS = 2200;     // Yüzde sayacının tahmini süre (ms)
-    const REVEAL_STAGGER = 140;       // Her parçanın gecikmesi (ms)
-    const REVEAL_LAST_EXTRA = 500;    // Son parça sonrası overlay’i kaldırma gecikmesi (ms)
+    const REVEAL_STAGGER = 20;       // Her parçanın gecikmesi (ms)
+    const REVEAL_LAST_EXTRA = 400;    // Son parça sonrası overlay’i kaldırma gecikmesi (ms)
     // =================
 
     const root = document.getElementById('page-loader');
