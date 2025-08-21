@@ -1,6 +1,11 @@
 body {
   font-family: "Manrope";
   letter-spacing: 0.5px;
+  background-color: #151515;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .manrope-bold {
@@ -34,3 +39,21 @@ body {
   color: white !important;
   transform: scale(1.2);
 }
+
+/* Wuda Agency Header */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+/* Wuda Agency Header */
