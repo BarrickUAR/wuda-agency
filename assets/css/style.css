@@ -93,3 +93,13 @@ html {
   transform: translateY(-6px);
 }
 /* loading screen */
+
+/* FAQS */
+details.group[open] .acc-content {
+  grid-template-rows: 1fr;
+}
+/* FAQS */
+
+/* CLIENTS AND FOOTER */
+
+/* CLIENTS AND FOOTER */

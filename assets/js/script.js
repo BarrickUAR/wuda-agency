@@ -1,8 +1,6 @@
 "use strict";
 
-/** ===============================
- *  Header Scroll Effect (throttled)
- *  =============================== */
+//  *  Header Scroll Effect
 (function () {
     const header = document.getElementById("header");
     if (!header) return;
@@ -23,10 +21,9 @@
     // İlk durum
     onScroll();
 })();
+//  *  Header Scroll Effect
 
-/** ===============================
- *  Drawer (Hamburger Menu)
- *  =============================== */
+//  *  Drawer (Hamburger Menu)
 (function () {
     const root = document.getElementById("mobile-drawer");
     const panel = document.getElementById("drawer-panel");
@@ -55,10 +52,9 @@
         if (e.key === "Escape") setDrawer(false);
     });
 })();
+//  *  Drawer (Hamburger Menu)
 
-/** ===============================
- *  Swiper + "WUDA AGENCY" Fade-Up
- *  =============================== */
+//  *  Swiper + "WUDA AGENCY" Fade-Up
 (function () {
     if (typeof Swiper === "undefined") return;
 
@@ -103,9 +99,7 @@
         },
     });
 })();
-/** ===============================
- *  Swiper + "WUDA AGENCY" Fade-Up
- *  =============================== */
+//  *  Swiper + "WUDA AGENCY" Fade-Up
 
 // Mouse Glow Effect
 (() => {
@@ -257,7 +251,6 @@
 })();
 // Mouse Glow Effect
 
-
 // loading screen
 (function () {
     // === Ayarlar ===
@@ -346,7 +339,6 @@
 })();
 // loading screen 
 
-
 // <!-- Progress bars: animate on view -->
 (function () {
     const root = document.getElementById('mission');
@@ -424,3 +416,39 @@
     els.forEach(el => io.observe(el));
 })();
 // About section
+
+// FAQS Section
+(function () {
+    const root = document.getElementById('faqs');
+    if (!root) return;
+    const accs = root.querySelectorAll('details.group');
+    accs.forEach(d => {
+        d.addEventListener('toggle', () => {
+            if (d.open) {
+                accs.forEach(o => { if (o !== d) o.removeAttribute('open'); });
+            }
+        });
+    });
+})();
+// FAQS Section
+
+// Testimonials Swiper
+const testimonialsSwiper = new Swiper('#testimonials-swiper', {
+    loop: true,
+    spaceBetween: 24,
+    slidesPerView: 1,
+    a11y: true,
+    keyboard: { enabled: true },
+    pagination: { el: '#testimonials-swiper .swiper-pagination', clickable: true },
+    navigation: {
+        nextEl: '#testimonials-swiper .swiper-button-next',
+        prevEl: '#testimonials-swiper .swiper-button-prev',
+    },
+    breakpoints: {
+        640: { slidesPerView: 2, spaceBetween: 24 },
+        1024: { slidesPerView: 3, spaceBetween: 24 }
+    },
+    autoplay: { delay: 3500, disableOnInteraction: false }
+});
+// Testimonials Swiper
+

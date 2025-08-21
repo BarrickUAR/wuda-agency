@@ -15,11 +15,15 @@
     <script src="/assets/js/script.js" defer></script>
     <title>Wuda Agency</title>
 
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 
 </head>
 
 <body>
+
+
     <!-- ===== LOADING SCREEN ===== -->
     <div id="page-loader" class="fixed inset-0 z-[9999] bg-black text-white">
         <!-- AŞAMA 1: LOADING SAYFASI -->
@@ -49,6 +53,9 @@
         </div>
     </div>
     <!-- ===== LOADING SCREEN ===== 
+
+
+    
 
     <!-- ============================================================================================================================================   -->
 
@@ -172,7 +179,7 @@
     </div>
     <!-- ===== HAMBURGERMENU ===== -->
 
-    <!-- ===== HEADER SECTION ===== -->
+    <!-- ===== /HEADER SECTION ===== -->
 
     <!-- ============================================================================================================================================   -->
 
@@ -301,7 +308,7 @@
             <div class="swiper-button-prev"></div>
         </div>
     </section>
-    <!-- ===== HERO SECTION ===== -->
+    <!-- =====  /HERO SECTION ===== -->
 
     <!-- ============================================================================================================================================   -->
 
@@ -369,7 +376,7 @@
             </div>
         </div>
     </section>
-    <!-- =====  WELCOME SECTION =====  -->
+    <!-- =====  /WELCOME SECTION =====  -->
 
     <!-- ============================================================================================================================================   -->
 
@@ -451,7 +458,7 @@
             </div>
         </div>
     </section>
-    <!-- ===== SERVICES SECTION ===== -->
+    <!-- =====  /SERVICES SECTION ===== -->
 
     <!-- ============================================================================================================================================   -->
     <!-- ===== MISSION SECTION ===== -->
@@ -698,16 +705,498 @@
     </section>
     <!-- ===== /ABOUT SECTION ===== -->
 
+    <!-- ============================================================================================================================================   -->
+
+    <!-- ===== FAQS SECTION ===== -->
+    <section id="faqs" class="relative bg-black text-white overflow-hidden">
+        <div class="relative mx-auto w-full max-w-screen-2xl px-6 lg:px-12 py-24">
+            <!-- Eyebrow -->
+            <p class="text-[#ccff00] tracking-widest text-sm font-semibold mb-4">// FAQS</p>
+
+            <!-- Heading + intro -->
+            <div class="max-w-3xl">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                    Everything you want to know before we start.
+                </h2>
+                <p class="text-white/70 mt-5">
+                    Can’t find what you’re looking for? <a href="#contact"
+                        class="underline decoration-[#ccff00] underline-offset-4 hover:text-[#ccff00]">Contact us</a>
+                    and we’ll get back within 24h.
+                </p>
+            </div>
+
+            <!-- Body -->
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+                <!-- Side card / CTA -->
+                <aside class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 lg:p-8">
+                    <h3 class="text-xl font-semibold">Short answer: Yes.</h3>
+                    <p class="text-white/70 mt-3">
+                        We tailor scope and team to your goals and timelines. From discovery sprints to full
+                        builds—we’ve got you.
+                    </p>
+
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">✓</span>
+                            <span class="text-white/80">Fixed-price or sprint-based options</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">✓</span>
+                            <span class="text-white/80">Design systems & performance by default</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">✓</span>
+                            <span class="text-white/80">Weekly demos & clear KPIs</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contact"
+                        class="mt-7 inline-block rounded-lg bg-[#ccff00] text-black font-semibold px-6 py-3 hover:-translate-y-0.5 transition">
+                        Talk to us →
+                    </a>
+                </aside>
+
+                <!-- Accordion -->
+                <div class="lg:col-span-2">
+                    <div class="divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
+                        <!-- Item -->
+                        <details class="group p-6">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+                                <h3 class="text-lg sm:text-xl font-medium">How do you structure projects and timelines?
+                                </h3>
+                                <svg class="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ccff00]"
+                                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 15.5l-7-7 1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7z" />
+                                </svg>
+                            </summary>
+                            <div
+                                class="acc-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <div class="overflow-hidden pt-4 text-white/80 leading-relaxed">
+                                    We work in 2-week sprints with weekly demos and clear deliverables. Discovery →
+                                    Prototype → Build → Launch → Optimize.
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Item -->
+                        <details class="group p-6">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+                                <h3 class="text-lg sm:text-xl font-medium">Do you work with our in-house team?</h3>
+                                <svg class="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ccff00]"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 15.5l-7-7 1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7z" />
+                                </svg>
+                            </summary>
+                            <div
+                                class="acc-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <div class="overflow-hidden pt-4 text-white/80 leading-relaxed">
+                                    Yes. We integrate with product, design and engineering, sharing roadmaps, repos and
+                                    rituals.
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Item -->
+                        <details class="group p-6">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+                                <h3 class="text-lg sm:text-xl font-medium">What about pricing and engagement models?
+                                </h3>
+                                <svg class="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ccff00]"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 15.5l-7-7 1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7z" />
+                                </svg>
+                            </summary>
+                            <div
+                                class="acc-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <div class="overflow-hidden pt-4 text-white/80 leading-relaxed">
+                                    Fixed-scope, monthly retainers or hybrid models. We’ll suggest the most efficient
+                                    structure after discovery.
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Item -->
+                        <details class="group p-6">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+                                <h3 class="text-lg sm:text-xl font-medium">Do you provide post-launch support?</h3>
+                                <svg class="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ccff00]"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 15.5l-7-7 1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7z" />
+                                </svg>
+                            </summary>
+                            <div
+                                class="acc-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <div class="overflow-hidden pt-4 text-white/80 leading-relaxed">
+                                    Absolutely—analytics, A/B tests, performance tuning and roadmap sprints to keep
+                                    improving.
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Item -->
+                        <details class="group p-6">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+                                <h3 class="text-lg sm:text-xl font-medium">What tools and stack do you use?</h3>
+                                <svg class="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ccff00]"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 15.5l-7-7 1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7z" />
+                                </svg>
+                            </summary>
+                            <div
+                                class="acc-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <div class="overflow-hidden pt-4 text-white/80 leading-relaxed">
+                                    Research & design: Figma, Maze. Dev: Next.js, Tailwind, Node, headless CMS.
+                                    Analytics: GA4, PostHog, custom dashboards.
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Item -->
+                        <details class="group p-6">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+                                <h3 class="text-lg sm:text-xl font-medium">How soon can we start?</h3>
+                                <svg class="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ccff00]"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 15.5l-7-7 1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7z" />
+                                </svg>
+                            </summary>
+                            <div
+                                class="acc-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-out">
+                                <div class="overflow-hidden pt-4 text-white/80 leading-relaxed">
+                                    Usually within 1–2 weeks after discovery alignment. We’ll propose a start date in
+                                    the kickoff note.
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== /FAQS SECTION ===== -->
+
+    <!-- ============================================================================================================================================   -->
+
+    <!-- ===== TESTIMONIAL SECTION (Swiper) ===== -->
+    <section id="testimonials" class="relative bg-black text-white overflow-hidden">
+        <div class="relative mx-auto w-full max-w-screen-2xl px-6 lg:px-12 py-24">
+            <!-- Eyebrow -->
+            <p class="text-[#ccff00] tracking-widest text-sm font-semibold mb-4">// TESTIMONIALS</p>
+
+            <!-- Heading -->
+            <div class="max-w-3xl">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                    Hear from what our customers say
+                </h2>
+                <p class="text-white/70 mt-5">
+                    Teams of all sizes trust us to design and build products that perform. Here’s a selection of what
+                    they say.
+                </p>
+            </div>
+
+            <!-- Swiper -->
+            <div class="mt-12">
+                <div id="testimonials-swiper" class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <article
+                                class="h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 flex flex-col gap-6">
+                                <div class="flex items-center gap-3">
+                                    <img src="/assets/images/avatars/a1.jpg" alt="Client avatar of Elena Fischer"
+                                        class="h-12 w-12 rounded-full object-cover" />
+                                    <div>
+                                        <div class="font-semibold">Elena Fischer</div>
+                                        <div class="text-sm text-white/60">VP Product, Orbitly</div>
+                                    </div>
+                                    <div class="ml-auto inline-flex items-center gap-1 text-[#ccff00]"
+                                        aria-label="Rated 5 out of 5">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                                <blockquote class="text-white/85 leading-relaxed">
+                                    “They shipped in weeks what took us months before. Clear process, strong design, and
+                                    real business impact.”
+                                </blockquote>
+                                <footer class="pt-2 text-xs text-white/50">Case study: Conversion +38% in 90 days
+                                </footer>
+                            </article>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <article
+                                class="h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 flex flex-col gap-6">
+                                <div class="flex items-center gap-3">
+                                    <img src="/assets/images/avatars/a2.jpg" alt="Client avatar of Marcus Lee"
+                                        class="h-12 w-12 rounded-full object-cover" />
+                                    <div>
+                                        <div class="font-semibold">Marcus Lee</div>
+                                        <div class="text-sm text-white/60">Founder, Fincha</div>
+                                    </div>
+                                    <div class="ml-auto inline-flex items-center gap-1 text-[#ccff00]"
+                                        aria-label="Rated 5 out of 5">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                                <blockquote class="text-white/85 leading-relaxed">
+                                    “Best partner we’ve had. The UX work and performance tuning directly lifted
+                                    retention and NPS.”
+                                </blockquote>
+                                <footer class="pt-2 text-xs text-white/50">Retention +12 pts • NPS +18</footer>
+                            </article>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <article
+                                class="h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 flex flex-col gap-6">
+                                <div class="flex items-center gap-3">
+                                    <img src="/assets/images/avatars/a3.jpg" alt="Client avatar of Sofía Martínez"
+                                        class="h-12 w-12 rounded-full object-cover" />
+                                    <div>
+                                        <div class="font-semibold">Sofía Martínez</div>
+                                        <div class="text-sm text-white/60">Head of Growth, Koda</div>
+                                    </div>
+                                    <div class="ml-auto inline-flex items-center gap-1 text-[#ccff00]"
+                                        aria-label="Rated 5 out of 5">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                                <blockquote class="text-white/85 leading-relaxed">
+                                    “Super fast, super clear. They brought our brand to life and kept us focused on
+                                    outcomes.”
+                                </blockquote>
+                                <footer class="pt-2 text-xs text-white/50">Time-to-ship 6 weeks • CAC ↓ 14%</footer>
+                            </article>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <article
+                                class="h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 flex flex-col gap-6">
+                                <div class="flex items-center gap-3">
+                                    <img src="/assets/images/avatars/a4.jpg" alt="Client avatar of David Chen"
+                                        class="h-12 w-12 rounded-full object-cover" />
+                                    <div>
+                                        <div class="font-semibold">David Chen</div>
+                                        <div class="text-sm text-white/60">COO, Nova Health</div>
+                                    </div>
+                                    <div class="ml-auto inline-flex items-center gap-1 text-[#ccff00]"
+                                        aria-label="Rated 5 out of 5">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                                <blockquote class="text-white/85 leading-relaxed">
+                                    “Accessibility and speed. Our clinics loved the new flow, and the ops team loved the
+                                    dashboards.”
+                                </blockquote>
+                                <footer class="pt-2 text-xs text-white/50">Core Web Vitals all green</footer>
+                            </article>
+                        </div>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="mt-8 flex items-center justify-between">
+                        <div class="swiper-pagination !static"></div>
+                        <div class="flex gap-3">
+                            <button
+                                class="swiper-button-prev !static !w-10 !h-10 !rounded-full !border !border-white/20 after:!content-[''] grid place-items-center">
+                                <span class="sr-only">Previous</span>
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="m15 19-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button
+                                class="swiper-button-next !static !w-10 !h-10 !rounded-full !border !border-white/20 after:!content-[''] grid place-items-center">
+                                <span class="sr-only">Next</span>
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="m9 5 7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- (Opsiyonel) logo şeridi ya da küçük not burada olabilir -->
+        </div>
+    </section>
+    <!-- ===== /TESTIMONIAL SECTION ===== -->
+
+    <!-- ============================================================================================================================================   -->
+
+    <!-- ===== CLIENTS SECTION (grid, eski hali) ===== -->
+    <section id="clients" class="relative bg-[#151515] text-white py-40 mb-14">
+        <div class="mx-auto w-full max-w-screen-2xl px-6 lg:px-12">
+            <p class="text-[#ccff00] tracking-widest text-sm font-semibold mb-4">// CLIENTS</p>
+
+            <div class="max-w-3xl">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                    Trusted by forward-thinking brands worldwide
+                </h2>
+                <p class="text-white/70 mt-5">
+                    From high-growth startups to global enterprises, we help teams ship products that perform.
+                </p>
+            </div>
+
+            <!-- Logo Grid -->
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l1.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 1" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l2.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 2" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l3.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 3" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l4.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 4" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l5.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 5" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l6.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 6" />
+                </div>
+
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l7.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 7" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l8.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 8" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l9.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 9" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l10.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 10" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l11.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 11" />
+                </div>
+                <div class="flex items-center justify-center h-14 rounded-xl bg-white/5 border border-white/10">
+                    <img src="/assets/images/logos/l12.svg"
+                        class="h-7 opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                        alt="Client 12" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== /CLIENTS SECTION ===== -->
 
 
+    <!-- ===== FOOTER SECTION (stabil & şık) ===== -->
+    <footer class="bg-black text-white border-t border-white/10">
+        <div class="mx-auto w-full max-w-screen-2xl px-6 lg:px-12 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <img src="/assets/images/logo.png" alt="Wuda Agency" class="h-24 w-auto">
+                    <p class="text-white/70">
+                        Design, engineering and growth—under one roof. We ship products that perform.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Twitter</a>
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Dribbble</a>
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">LinkedIn</a>
+                    </div>
+                </div>
+
+                <!-- Pages -->
+                <div>
+                    <h4 class="text-sm tracking-widest text-[#ccff00] font-semibold mb-4">// PAGES</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="#about" class="hover:text-white">About</a></li>
+                        <li><a href="#services" class="hover:text-white">Services</a></li>
+                        <li><a href="#works" class="hover:text-white">Works</a></li>
+                        <li><a href="#blog" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-sm tracking-widest text-[#ccff00] font-semibold mb-4">// CONTACT</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li>hello@wuda.agency</li>
+                        <li>Istanbul • Berlin</li>
+                        <li>+90 555 000 00 00</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-sm tracking-widest text-[#ccff00] font-semibold mb-4">// NEWSLETTER</h4>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your email"
+                            class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none text-white placeholder-white/40">
+                        <button class="px-5 py-3 rounded-lg bg-[#ccff00] text-black font-semibold">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div
+                class="mt-12 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 text-sm">
+                <span>©
+                    <script>document.write(new Date().getFullYear())</script> Wuda Agency. All rights reserved.
+                </span>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Privacy</a>
+                    <a href="#" class="hover:text-white">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== /FOOTER SECTION ===== -->
 
 
+    <!-- ============================================================================================================================================   -->
 
-
-
-
-
-
+    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
+    <div class="flex items-center flex-col justify-center text-white bg-black/75 p-3">
+        <div class="flex items-center justify-center text-white border-gray-200 border-t gap-4 text-center text-sm">
+            Designed with ❤️ by <a href="https://devpixel.com.tr" class="hover:underline font-semibold text-clifford"
+                target="_blank"><img src="/assets/images/devpixel-logo.png" alt="" width="100" height="100"></a>
+        </div>
+        <div class="flex items-center justify-center gap-4 devPixelSocial mt-2"><a href="https://devpixel.com.tr"
+                class="text-white duration-300 transition hover:text-green-500" target="_blank"><i class="fa fa-link"
+                    aria-hidden="true"></i> </a><a href="https://www.instagram.com/devpixeltech/"
+                class="text-white duration-300 transition hover:text-pink-600" target="_blank"><i
+                    class="fab fa-instagram"></i> </a><a href="https://www.linkedin.com/company/devpixel-tech"
+                class="text-white duration-300 transition hover:text-blue-700" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a></div>
+    </div>
+    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
 
 
 
