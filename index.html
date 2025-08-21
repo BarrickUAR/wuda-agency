@@ -65,12 +65,83 @@
             </nav>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden text-white text-2xl focus:outline-none">
+            <button id="btn-open-drawer" class="md:hidden text-white text-2xl focus:outline-none"
+                aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu">
                 ☰
             </button>
         </div>
     </header>
     <!-- ===== HEADER SECTION ===== -->
+
+    <!-- ===== MOBILE DRAWER (FULL WIDTH) ===== -->
+    <div id="mobile-drawer" class="fixed inset-0 z-[60] pointer-events-none opacity-0 transition-opacity duration-300"
+        aria-hidden="true">
+        <!-- Backdrop -->
+        <div id="drawer-backdrop" class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"></div>
+
+        <!-- Panel (Full width, left slide-in) -->
+        <aside id="drawer-panel" class="absolute left-0 top-0 h-full w-full max-w-full bg-[#151515] text-white
+                translate-x-[-100%] transition-all duration-800 ease-out overflow-y-auto">
+
+            <!-- Top: logo + close -->
+            <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+                <a href="/" class="flex items-center gap-3">
+                    <img src="/assets/images/logo.png" alt="Logo" class="h-24 w-auto">
+                </a>
+                <button id="btn-close-drawer"
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-md border border-white/20"
+                    aria-label="Close menu">
+                    <!-- X icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Nav list (left), right arrows -->
+            <nav class="px-6 py-4">
+                <ul class="divide-y divide-white/10">
+                    <li>
+                        <a href="#home" class="flex items-center justify-between py-4 group">
+                            <span class="text-xl">Home</span>
+                            <span
+                                class="inline-block transition-transform duration-200 group-hover:translate-x-1 text-[#ccff00]">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="flex items-center justify-between py-4 group">
+                            <span class="text-xl">Services</span>
+                            <span
+                                class="inline-block transition-transform duration-200 group-hover:translate-x-1 text-[#ccff00]">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="flex items-center justify-between py-4 group">
+                            <span class="text-xl">Projects</span>
+                            <span
+                                class="inline-block transition-transform duration-200 group-hover:translate-x-1 text-[#ccff00]">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="flex items-center justify-between py-4 group">
+                            <span class="text-xl">Contact</span>
+                            <span
+                                class="inline-block transition-transform duration-200 group-hover:translate-x-1 text-[#ccff00]">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Big image bottom -->
+            <div class="px-6 pb-8">
+                <img src="/assets/images/hamburgermenu-image.jpg" alt="Showcase"
+                    class="w-full aspect-[16/9] object-cover rounded-xl border border-white/10">
+            </div>
+        </aside>
+    </div>
+    <!-- ===== /MOBILE DRAWER ===== -->
+
 
     <!-- ===== HERO SECTION ===== -->
     <section class="relative w-full h-screen bg-black">
@@ -83,14 +154,13 @@
                     <video autoplay muted loop class="w-full h-screen object-cover filter grayscale opacity-50">
                         <source src="/assets/videos/slider-video.mp4" type="video/mp4">
                     </video>
+
                     <!-- Text & Buttons -->
                     <div
                         class="absolute mx-auto top-2/5 left-1/3 md:w-1/4 transform -translate-x-1/2 text-center px-4 md:px-0">
                         <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12 text-start">
                             Digital Experiences through Technology & Innovation.
                         </h2>
-
-                        <!-- Butonlar -->
                         <div class="flex flex-col sm:flex-row gap-4 justify-start">
                             <a href="#services"
                                 class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
@@ -105,13 +175,14 @@
                                 <span class="relative z-10 hover:text-black">LEARN MORE →</span>
                             </a>
                         </div>
+                    </div>
 
-                        <!-- Alt yazı -->
-                        <div class="relative top-100">
-                            <p class="hero-tag opacity-0 text-white text-md tracking-widest font-semibold text-start">
-                                WUDA AGENCY
-                            </p>
-                        </div>
+                    <!-- Alt yazı: EN ALTA & SOLA SABİTLİ -->
+                    <div class="absolute bottom-20 left-130 z-10">
+                        <p
+                            class="hero-tag opacity-0 text-white text-sm sm:text-base md:text-lg tracking-widest font-semibold text-left">
+                            WUDA AGENCY
+                        </p>
                     </div>
                 </div>
 
@@ -119,12 +190,12 @@
                 <div class="swiper-slide relative">
                     <img src="/assets/images/hero-image.jpg" alt="Hero Image"
                         class="w-full h-screen object-cover filter grayscale">
+
                     <div
                         class="absolute mx-auto top-2/5 left-1/3 md:w-1/4 transform -translate-x-1/2 text-center px-4 md:px-0">
                         <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12 text-start">
                             Digital Experiences through Technology & Innovation.
                         </h2>
-
                         <div class="flex flex-col sm:flex-row gap-4 justify-start">
                             <a href="#services"
                                 class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
@@ -135,16 +206,18 @@
                             <a href="#about"
                                 class="relative text-white text-lg sm:text-xl border-b-2 border-white overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
                                 <span
-                                    class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
+                                    class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out z-0"></span>
                                 <span class="relative z-10 hover:text-black">LEARN MORE →</span>
                             </a>
                         </div>
+                    </div>
 
-                        <div class="relative top-100">
-                            <p class="hero-tag opacity-0 text-white text-lg tracking-widest font-semibold text-start">
-                                Wuda Agency
-                            </p>
-                        </div>
+                    <!-- Alt yazı: EN ALTA & SOLA SABİTLİ -->
+                    <div class="absolute bottom-20 left-130 z-10">
+                        <p
+                            class="hero-tag opacity-0 text-white text-sm sm:text-base md:text-lg tracking-widest font-semibold text-left">
+                            WUDA AGENCY
+                        </p>
                     </div>
                 </div>
 
@@ -152,12 +225,12 @@
                 <div class="swiper-slide relative">
                     <img src="/assets/images/hero-image2.jpg" alt="Hero Image"
                         class="w-full h-screen object-cover filter grayscale">
+
                     <div
                         class="absolute mx-auto top-2/5 left-1/3 md:w-1/4 transform -translate-x-1/2 text-center px-4 md:px-0">
                         <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12 text-start">
                             Digital Experiences through Technology & Innovation.
                         </h2>
-
                         <div class="flex flex-col sm:flex-row gap-4 justify-start">
                             <a href="#services"
                                 class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
@@ -168,16 +241,18 @@
                             <a href="#about"
                                 class="relative text-white text-lg sm:text-xl border-b-2 border-white overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
                                 <span
-                                    class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
+                                    class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out z-0"></span>
                                 <span class="relative z-10 hover:text-black">LEARN MORE →</span>
                             </a>
                         </div>
+                    </div>
 
-                        <div class="relative top-100">
-                            <p class="hero-tag opacity-0 text-white text-lg tracking-widest font-semibold text-start">
-                                Wuda Agency
-                            </p>
-                        </div>
+                    <!-- Alt yazı: EN ALTA & SOLA SABİTLİ -->
+                    <div class="absolute bottom-20 left-130 z-10">
+                        <p
+                            class="hero-tag opacity-0 text-white text-sm sm:text-base md:text-lg tracking-widest font-semibold text-left">
+                            WUDA AGENCY
+                        </p>
                     </div>
                 </div>
 
@@ -191,17 +266,22 @@
     </section>
     <!-- ===== HERO SECTION ===== -->
 
+
+
+
     <!-- =====  WELCOME SECTION =====  -->
-    <section id="welcome" class="md:py-50 py-20 bg-black">
+    <section id="welcome" class="py-20 md:py-50 bg-black">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
 
             <!-- Sol Taraf -->
             <div class="w-full md:w-1/2">
                 <h4 class="text-md text-[#ccff00] font-semibold mb-10 z-50 tracking-widest">// WELCOME</h4>
-                <h2 class="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl text-start mb-8">
-                    Transforming Brands through
-                    digital experiences and innovation.
+
+                <h2 class="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl text-start mb-8 leading-snug">
+                    Transforming <span class="border-b-2 border-[#ccff00]">Brands</span><br>
+                    through digital experiences and innovation.
                 </h2>
+
                 <p class="text-lg text-gray-400 mb-12 text-start">
                     Light wherein over two give whales likeness greater. They’re stars lights likeness subdue one.
                     You’ll bring let life moving firmament she’d also dominion. Land creature hath seed doesn’t
@@ -234,24 +314,22 @@
                 </ul>
 
                 <!-- What We Do Butonu -->
-                <a href="#" class="group inline-block px-6 py-3 text-[#ccff00] 
-          font-semibold rounded-lg transition-all text-xl  ">
+                <a href="#"
+                    class="group inline-block px-6 py-3 text-[#ccff00] font-semibold rounded-lg transition-all text-xl">
                     What We Do
-                    <span class="inline-block ml-3 transform transition-all duration-300 group-hover:-rotate-90">
-                        →
-                    </span>
+                    <span
+                        class="inline-block ml-3 transform transition-all duration-300 group-hover:-rotate-90">→</span>
                 </a>
-
             </div>
 
             <!-- Sağ Taraf (Çapraz Resimler) -->
-            <div class="w-full md:w-1/2 relative flex justify-center items-center">
+            <div class="w-full md:w-1/2 relative flex justify-center items-center min-h-[320px]">
                 <!-- Sağ üst resim -->
                 <img src="/assets/images/welcome-image.jpg" alt="Resim 1"
                     class="absolute top-0 right-10 w-48 md:w-64 rounded-xl shadow-lg rotate-6" />
                 <!-- Sol alt resim -->
                 <img src="/assets/images/welcome-image2.jpg" alt="Resim 2"
-                    class="absolute bottom-0 left-10 w-48 md:w-84 rounded-xl shadow-lg -rotate-6" />
+                    class="absolute bottom-0 left-10 w-48 md:w-64 rounded-xl shadow-lg -rotate-6" />
             </div>
         </div>
     </section>
@@ -268,7 +346,7 @@
             <h4 class="text-md text-[#ccff00] font-semibold mb-10 z-50 tracking-widest">// SERVICES</h4>
 
             <!-- H2 -->
-            <h2 class="text-3xl sm:text-4xl md:text-5xl w-1/2 text-white font- mb-24">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl w-full md:w-1/2 text-white font-semibold mb-24">
                 We create amazing products that define user experience.
             </h2>
 
@@ -277,69 +355,55 @@
 
                 <!-- Item 1 -->
                 <article
-                    class="relative p-8 border-b bg-[#151515] border-white/15 min-h-[260px] 
-                     flex flex-col justify-between hover:border rounded-xl hover:border-[#ccff00] transition-all duration-300">
+                    class="relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300">
                     <!-- Sağ üst büyük ikon -->
-                    <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 mt-5 md:h-24 text-black bg-[#ccff00]"
+                    <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 md:h-24 text-black bg-[#ccff00]"
                         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M11 3l1.5 4.5L17 9l-4.5 1.5L11 15l-1.5-4.5L5 9l4.5-1.5L11 3zM19 13l.9 2.7L22 16l-2.1.3L19 19l-.9-2.7L16 16l2.1-.3L19 13z" />
                     </svg>
                     <div class="border-b border-white/15 pb-8">
-                        <h3 class="text-white text-3xl font-semibold mb-3 p-3 w-1/3">Digital Stategy</h3>
-                        <p class="text-gray-500 p-3 text-lg">
-
+                        <h3 class="text-white text-3xl font-semibold mb-3 p-3 w-fit">Digital Strategy</h3>
+                        <p class="text-gray-400 p-3 text-lg">
                             Light wherein over two give whales likeness greater they are stars lights likeness were
                             subdue one. You'll bring let life moving firmament she'd also bring let dominion.
                         </p>
                     </div>
                 </article>
-                <!-- Item 1 -->
 
                 <!-- Item 2 -->
                 <article
-                    class="relative p-8 border-b bg-[#151515] border-white/15 min-h-[260px] 
-                     flex flex-col justify-between hover:border rounded-xl hover:border-[#ccff00] transition-all duration-300">
-                    <!-- Sağ üst büyük ikon -->
-                    <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 mt-5 md:h-24 text-black bg-[#ccff00]"
+                    class="relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300">
+                    <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 md:h-24 text-black bg-[#ccff00]"
                         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M11 3l1.5 4.5L17 9l-4.5 1.5L11 15l-1.5-4.5L5 9l4.5-1.5L11 3zM19 13l.9 2.7L22 16l-2.1.3L19 19l-.9-2.7L16 16l2.1-.3L19 13z" />
                     </svg>
                     <div class="border-b border-white/15 pb-8">
-                        <h3 class="text-white text-3xl font-semibold mb-3 p-3 w-1/3">Digital Stategy</h3>
-                        <p class="text-gray-500 p-3 text-lg">
-
+                        <h3 class="text-white text-3xl font-semibold mb-3 p-3 w-fit">UI / UX Design</h3>
+                        <p class="text-gray-400 p-3 text-lg">
                             Light wherein over two give whales likeness greater they are stars lights likeness were
                             subdue one. You'll bring let life moving firmament she'd also bring let dominion.
                         </p>
                     </div>
                 </article>
-                <!-- Item 2 -->
 
                 <!-- Item 3 -->
                 <article
-                    class="relative p-8 border-b bg-[#151515] border-white/15 min-h-[260px] 
-                     flex flex-col justify-between hover:border rounded-xl hover:border-[#ccff00] transition-all duration-300">
-                    <!-- Sağ üst büyük ikon -->
-                    <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 mt-5 md:h-24 text-black bg-[#ccff00]"
+                    class="relative p-8 border border-white/15 bg-[#151515] min-h-[260px] rounded-xl flex flex-col justify-between hover:border-[#ccff00] transition-all duration-300">
+                    <svg class="absolute -top-5 right-0 w-14 h-14 md:w-24 md:h-24 text-black bg-[#ccff00]"
                         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M11 3l1.5 4.5L17 9l-4.5 1.5L11 15l-1.5-4.5L5 9l4.5-1.5L11 3zM19 13l.9 2.7L22 16l-2.1.3L19 19l-.9-2.7L16 16l2.1-.3L19 13z" />
                     </svg>
                     <div class="border-b border-white/15 pb-8">
-                        <h3 class="text-white text-3xl font-semibold mb-3 p-3 w-1/3">Digital Stategy</h3>
-                        <p class="text-gray-500 p-3 text-lg">
-
+                        <h3 class="text-white text-3xl font-semibold mb-3 p-3 w-fit">SEO & Performance</h3>
+                        <p class="text-gray-400 p-3 text-lg">
                             Light wherein over two give whales likeness greater they are stars lights likeness were
                             subdue one. You'll bring let life moving firmament she'd also bring let dominion.
                         </p>
                     </div>
                 </article>
-                <!-- Item 3 -->
-
-
-
 
             </div>
         </div>
