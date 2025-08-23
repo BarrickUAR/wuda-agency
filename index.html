@@ -217,124 +217,137 @@
 
     <!-- ===== HERO SECTION ===== -->
     <section class="relative w-full h-screen bg-black">
-        <!-- Slider Wrapper -->
+        <!-- Slider -->
         <div class="swiper h-full">
             <div class="swiper-wrapper">
 
-                <!-- Slide 1 (Video) -->
-                <div class="swiper-slide relative">
-                    <video autoplay muted loop class="w-full h-screen object-cover filter grayscale opacity-50">
-                        <source src="/assets/videos/slider-video.mp4" type="video/mp4">
-                    </video>
-
-                    <!-- Text & Buttons -->
-                    <div class="absolute mx-auto
-                 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center
-                 md:top-2/5 md:left-1/3 md:-translate-y-0 md:text-left
-                 w-11/12 sm:w-3/4 md:w-1/4 px-4 md:px-0">
-                        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12">
-                            Markanızı dijital dünyada yalnızca görünür kılmıyoruz, iz bırakıyoruz.”
-                        </h2>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href="#services"
-                                class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
-                                <span
-                                    class="absolute bottom-0 left-0 w-full h-full bg-[#ccff00] scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 hover:text-white z-0"></span>
-                                <span class="relative z-10 hover:text-black">İLETİŞİME GEÇ →</span>
-                            </a>
-                            <a href="/about.html"
-                                class="relative text-white text-lg sm:text-xl border-b-2 border-white overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
-                                <span
-                                    class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
-                                <span class="relative z-10 hover:text-black">DAHA FAZLA →</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Alt yazı -->
-                    <div class="absolute bottom-6 left-6 md:bottom-8 md:left-130 z-10">
-                        <p
-                            class="hero-tag opacity-0 text-white text-[10px] sm:text-base tracking-widest font-bold  text-left">
-                            WUDA AGENCY
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Slide 2 (Image) -->
-                <div class="swiper-slide relative">
+                <!-- Slide 1 (Image) -->
+                <div class="swiper-slide relative h-screen">
+                    <!-- bg -->
                     <img src="/assets/images/hero-image.jpg" alt="Hero Image"
-                        class="w-full h-screen object-cover filter grayscale">
+                        class="absolute inset-0 w-full h-full object-cover grayscale" />
+                    <div class="absolute inset-0 bg-black/40"></div>
 
+                    <!-- text -->
                     <div class="absolute mx-auto
                  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center
                  md:top-2/5 md:left-1/3 md:-translate-y-0 md:text-left
-                 w-11/12 sm:w-3/4 md:w-1/4 px-4 md:px-0">
-                        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12">
+                 w-11/12 sm:w-3/4 md:max-w-xl px-4 md:px-0 z-10">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12 leading-tight">
                             Reklamlarınız sizi anlatıyor mu, yoksa sadece görünüyor mu?
                         </h2>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                             <a href="#services"
                                 class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
                                 <span
-                                    class="absolute bottom-0 left-0 w-full h-full bg-[#ccff00] scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 hover:text-white z-0"></span>
-                                <span class="relative z-10 hover:text-black">İLETİŞİME GEÇ →</span>
+                                    class="absolute bottom-0 left-0 w-full h-full bg-[#ccff00] scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
+                                <span class="relative z-10 group-hover:text-black">İLETİŞİME GEÇ →</span>
                             </a>
                             <a href="/about.html"
                                 class="relative text-white text-lg sm:text-xl border-b-2 border-white overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
                                 <span
                                     class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
-                                <span class="relative z-10 hover:text-black">DAHA FAZLA →</span>
+                                <span class="relative z-10 group-hover:text-black">DAHA FAZLA →</span>
                             </a>
                         </div>
                     </div>
 
-                    <div class="absolute bottom-6 left-6 md:bottom-8 md:left-130 z-10">
+                    <!-- tag -->
+                    <div class="absolute bottom-6 left-6 md:bottom-8 md:left-[130px] z-10">
                         <p
-                            class="hero-tag opacity-0 text-white text-[10px] sm:text-base tracking-widest font-bold  text-left">
+                            class="hero-tag opacity-0 text-white text-[10px] sm:text-base tracking-widest font-bold text-left">
+                            WUDA AGENCY
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 (Image) -->
+                <div class="swiper-slide relative h-screen">
+                    <!-- bg -->
+                    <img src="/assets/images/hero-image2.jpg" alt="Hero Image"
+                        class="absolute inset-0 w-full h-full object-cover grayscale" />
+                    <div class="absolute inset-0 bg-black/40"></div>
+
+                    <!-- text -->
+                    <div class="absolute mx-auto
+                 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center
+                 md:top-2/5 md:left-1/3 md:-translate-y-0 md:text-left
+                 w-11/12 sm:w-3/4 md:max-w-xl px-4 md:px-0 z-10">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12 leading-tight">
+                            Reklamlarınız sizi anlatıyor mu, yoksa sadece görünüyor mu?
+                        </h2>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#services"
+                                class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
+                                <span
+                                    class="absolute bottom-0 left-0 w-full h-full bg-[#ccff00] scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
+                                <span class="relative z-10 group-hover:text-black">İLETİŞİME GEÇ →</span>
+                            </a>
+                            <a href="/about.html"
+                                class="relative text-white text-lg sm:text-xl border-b-2 border-white overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
+                                <span
+                                    class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
+                                <span class="relative z-10 group-hover:text-black">DAHA FAZLA →</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- tag -->
+                    <div class="absolute bottom-6 left-6 md:bottom-8 md:left-[130px] z-10">
+                        <p
+                            class="hero-tag opacity-0 text-white text-[10px] sm:text-base tracking-widest font-bold text-left">
                             WUDA AGENCY
                         </p>
                     </div>
                 </div>
 
                 <!-- Slide 3 (Image) -->
-                <div class="absolute mx-auto
+                <div class="swiper-slide relative h-screen">
+                    <!-- bg (örnek başka görsel) -->
+                    <img src="/assets/images/hero-image2.jpg" alt="Hero Image 2"
+                        class="absolute inset-0 w-full h-full object-cover grayscale" />
+                    <div class="absolute inset-0 bg-black/40"></div>
+
+                    <!-- text -->
+                    <div class="absolute mx-auto
                  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center
                  md:top-2/5 md:left-1/3 md:-translate-y-0 md:text-left
-                 w-11/12 sm:w-3/4 md:w-1/4 px-4 md:px-0">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12">
-                        Fikriniz var, peki ya etki?
-                    </h2>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#services"
-                            class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-full bg-[#ccff00] scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 hover:text-white z-0"></span>
-                            <span class="relative z-10 hover:text-black">İLETİŞİME GEÇ →</span>
-                        </a>
-                        <a href="/about.html"
-                            class="relative text-white text-lg sm:text-xl border-b-2 border-white overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
-                            <span class="relative z-10 hover:text-black">DAHA FAZLA →</span>
-                        </a>
+                 w-11/12 sm:w-3/4 md:max-w-xl px-4 md:px-0 z-10">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-12 leading-tight">
+                            Fikriniz var, peki ya etki?
+                        </h2>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#services"
+                                class="relative text-[#ccff00] text-lg sm:text-xl tracking-widest border-b-2 border-[#ccff00] overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
+                                <span
+                                    class="absolute bottom-0 left-0 w-full h-full bg-[#ccff00] scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
+                                <span class="relative z-10 group-hover:text-black">İLETİŞİME GEÇ →</span>
+                            </a>
+                            <a href="/about.html"
+                                class="relative text-white text-lg sm:text-xl border-b-2 border-white overflow-hidden group px-6 py-3 sm:px-8 sm:py-4">
+                                <span
+                                    class="absolute bottom-0 left-0 w-full h-full bg-white scale-y-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-y-100 z-0"></span>
+                                <span class="relative z-10 group-hover:text-black">DAHA FAZLA →</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- tag -->
+                    <div class="absolute bottom-6 left-6 md:bottom-8 md:left-[130px] z-10">
+                        <p
+                            class="hero-tag opacity-0 text-white text-[10px] sm:text-base tracking-widest font-bold text-left">
+                            WUDA AGENCY
+                        </p>
                     </div>
                 </div>
 
-                <div class="absolute bottom-6 left-6 md:bottom-8 md:left-130 z-10">
-                    <p
-                        class="hero-tag opacity-0 text-white text-[10px] sm:text-base tracking-widest font-bold  text-left">
-                        WUDA AGENCY
-                    </p>
-                </div>
             </div>
-
         </div>
 
-        <!-- Slider Controls -->
+        <!-- Slider Controls (wrapper DIŞINDA kalsın) -->
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        </div>
     </section>
     <!-- =====  /HERO SECTION ===== -->
 
@@ -563,7 +576,6 @@
         </div>
     </section>
     <!-- ===== /SERVICES SECTION ===== -->
-
 
     <!-- ============================================================================================================================================   -->
 
