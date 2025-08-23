@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim | Wuda Agency</title>
+    <!-- Tailwind CSS (projende zaten varsa bunu kaldır) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- ===== HEADER SECTION (senin verdiğin) ===== -->
+    <header id="header" class="fixed w-full top-0 left-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-20">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center">
+                <img src="/assets/images/logo.png" alt="Wuda Ajans Logo" class="h-50 w-auto">
+            </a>
+
+            <!-- Navbar -->
+            <nav class="space-x-14 hidden md:flex">
+                <a href="#home" class="relative group text-white text-lg md:text-md font-medium tracking-widest">
+                    Ana Sayfa
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="relative group text-white text-lg md:text-md font-medium tracking-widest">
+                    Hakkımızda
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#services" class="relative group text-white text-lg md:text-md font-medium tracking-widest">
+                    Uzmanlıklarımız
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#blog" class="relative group text-white text-lg md:text-md font-medium tracking-widest">
+                    Blog
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="relative group text-white text-lg md:text-md font-medium tracking-widest">
+                    İletişim
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Icon -->
+            <button id="btn-open-drawer" class="md:hidden text-white text-2xl focus:outline-none"
+                aria-controls="mobile-drawer" aria-expanded="false" aria-label="Menüyü Aç">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== /HAMBURGERMENU ===== -->
+    <div id="mobile-drawer" class="fixed inset-0 z-[60] pointer-events-none opacity-0 transition-opacity duration-300"
+        aria-hidden="true">
+        <!-- Backdrop -->
+        <div id="drawer-backdrop" class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"></div>
+
+        <!-- Panel -->
+        <aside id="drawer-panel" class="absolute left-0 top-0 h-full w-full max-w-full bg-[#151515] text-white
+      -translate-x-full transition-all duration-300 ease-out overflow-y-auto">
+
+            <!-- Top: logo + close -->
+            <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+                <a href="#home" class="flex items-center gap-3">
+                    <img src="/assets/images/logo.png" alt="Logo" class="h-24 w-auto">
+                </a>
+                <button id="btn-close-drawer"
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-md border border-white/20"
+                    aria-label="Menüyü Kapat">
+                    <!-- X icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Nav list -->
+            <nav class="px-6 py-4">
+                <ul class="divide-y divide-white/10">
+                    <li>
+                        <a href="#home" class="flex items-center justify-between py-4 group">
+                            <span class="text-xl">Ana Sayfa</span>
+                            <span
+                                class="inline-block transition-transform duration-200 group-hover:translate-x-1 text-[#ccff00]">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="flex items-center justify-between py-4 group">
+                            <span class="text-xl">Hizmetler</span>
+                            <span
+                                class="inline-block transition-transform duration-200 group-hover:translate-x-1 text-[#ccff00]">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="flex items-center justify-between py-4 group">
+                            <span class="text-xl">İletişim</span>
+                            <span
+                                class="inline-block transition-transform duration-200 group-hover:translate-x-1 text-[#ccff00]">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Big image bottom -->
+            <div class="px-6 pb-8">
+                <img src="/assets/images/hamburgermenu-image.jpg" alt="Menü Görseli"
+                    class="w-full aspect-[16/9] object-cover rounded-xl border border-white/10">
+            </div>
+        </aside>
+    </div>
+    <!-- ===== HAMBURGERMENU ===== -->
+
+    <!-- ===== CONTACT HERO ===== -->
+    <section class="relative w-full">
+        <div class="relative min-h-[36vh] flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+                <p class="text-[#ccff00] tracking-widest text-sm font-semibold">// İLETİŞİM</p>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mt-3">Bizimle İletişime Geçin</h1>
+                <p class="text-white/70 mt-4 max-w-2xl">
+                    Sorularınız, proje talepleriniz veya bir fikir mi var? Hızlıca konuşalım.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT GRID ===== -->
+    <section id="contact" class="relative">
+        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <!-- Info Cards -->
+            <div class="space-y-5 lg:col-span-1">
+                <!-- Card -->
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                    <h3 class="text-xl font-semibold">Hızlı İletişim</h3>
+                    <p class="text-white/70 mt-2">
+                        Pazartesi–Cuma, 10:00–18:00 (GMT+3). Mesaj bırakın, 24 saat içinde dönüş yapalım.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-white/80">
+                        <li><span class="text-white/60">E-posta:</span> wudagency@gmail.com</li>
+                        <li><span class="text-white/60">Telefon:</span> +90 555 000 00 00</li>
+                        <li><span class="text-white/60">Lokasyon:</span> İstanbul • Berlin</li>
+                    </ul>
+                </div>
+
+                <!-- Card -->
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                    <h3 class="text-xl font-semibold">Teklif / Brief</h3>
+                    <p class="text-white/70 mt-2">
+                        Projeniz hakkında hedef, süre ve bütçe çerçevenizi kısaca paylaşın.
+                    </p>
+                    <a href="#contact-form"
+                        class="mt-4 inline-block rounded-lg bg-[#ccff00] text-black font-semibold px-5 py-3 hover:-translate-y-0.5 transition">
+                        Brief Gönder →
+                    </a>
+                </div>
+
+                <!-- Card -->
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                    <h3 class="text-xl font-semibold">Sosyal</h3>
+                    <div class="flex gap-4 mt-3">
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Twitter</a>
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Dribbble</a>
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-2">
+                <form id="contact-form"
+                    class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 lg:p-8 space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm text-white/70 mb-2" for="name">Ad Soyad</label>
+                            <input id="name" name="name" type="text" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none text-white placeholder-white/40"
+                                placeholder="Adınız Soyadınız" />
+                        </div>
+                        <div>
+                            <label class="block text-sm text-white/70 mb-2" for="email">E-posta</label>
+                            <input id="email" name="email" type="email" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none text-white placeholder-white/40"
+                                placeholder="ornek@domain.com" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm text-white/70 mb-2" for="phone">Telefon (opsiyonel)</label>
+                            <input id="phone" name="phone" type="tel"
+                                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none text-white placeholder-white/40"
+                                placeholder="+90 5xx xxx xx xx" />
+                        </div>
+                        <div>
+                            <label class="block text-sm text-white/70 mb-2" for="subject">Konu</label>
+                            <input id="subject" name="subject" type="text" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none text-white placeholder-white/40"
+                                placeholder="Proje / Teklif / İşbirliği" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm text-white/70 mb-2" for="message">Mesaj</label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none text-white placeholder-white/40"
+                            placeholder="Kısaca hedefiniz, zaman planınız ve bütçe aralığınızı yazabilirsiniz."></textarea>
+                    </div>
+
+                    <!-- KVKK -->
+                    <label class="flex items-start gap-3 text-sm text-white/70">
+                        <input type="checkbox" required class="mt-1">
+                        <span>
+                            KVKK kapsamında kişisel verilerimin <a href="/kvkk"
+                                class="underline decoration-[#ccff00] underline-offset-2">Aydınlatma Metni</a> uyarınca
+                            işlenmesini kabul ediyorum.
+                        </span>
+                    </label>
+
+                    <div class="flex items-center gap-3">
+                        <button type="submit"
+                            class="rounded-lg bg-[#ccff00] text-black font-semibold px-6 py-3 hover:-translate-y-0.5 transition">
+                            Gönder
+                        </button>
+                        <span id="form-status" class="text-sm text-white/60 hidden">Mesajınız gönderiliyor…</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <section class="relative">
+        <div class="max-w-7xl mx-auto px-6 pb-16">
+            <div class="rounded-2xl overflow-hidden border border-white/10">
+                <!-- Google Maps embed (örnek) -->
+                <iframe title="Wuda Agency Lokasyon" class="w-full h-[360px]" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12034.675!2d28.979!3d41.015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSXTEn2FuYnVs!5e0!3m2!1str!2str!4v1680000000000">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER SECTION (senin verdiğin) ===== -->
+    <footer class="bg-black text-white border-t border-white/10">
+        <div class="mx-auto w-full max-w-screen-2xl px-6 lg:px-12 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <img src="/assets/images/logo.png" alt="Wuda Ajans" class="h-24 w-auto">
+                    <p class="text-white/70">
+                        Tasarım, yazılım ve büyüme—tek çatı altında. Performans odaklı projeler üretiyoruz.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Twitter</a>
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Dribbble</a>
+                        <a href="#" class="text-white/70 hover:text-[#ccff00]">LinkedIn</a>
+                    </div>
+                </div>
+
+                <!-- Pages -->
+                <div>
+                    <h4 class="text-sm tracking-widest text-[#ccff00] font-semibold mb-4">// SAYFALAR</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="#about" class="hover:text-white">Hakkımızda</a></li>
+                        <li><a href="#services" class="hover:text-white">Hizmetler</a></li>
+                        <li><a href="#blog" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-sm tracking-widest text-[#ccff00] font-semibold mb-4">// İLETİŞİM</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li>wudagency@gmail.com</li>
+                        <li>İstanbul • Berlin</li>
+                        <li>+90 555 000 00 00</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-sm tracking-widest text-[#ccff00] font-semibold mb-4">// BÜLTEN</h4>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="E-posta adresiniz"
+                            class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none text-white placeholder-white/40">
+                        <button class="px-5 py-3 rounded-lg bg-[#ccff00] text-black font-semibold">Abone Ol</button>
+                    </form>
+                </div>
+            </div>
+
+            <div
+                class="mt-12 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 text-sm">
+                <span>©
+                    <script>document.write(new Date().getFullYear())</script> Wuda Ajans. Tüm hakları saklıdır.
+                </span>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Gizlilik</a>
+                    <a href="#" class="hover:text-white">Şartlar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== /FOOTER SECTION ===== -->
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Header background on scroll
+        const header = document.getElementById('header');
+        const onScroll = () => {
+            if (window.scrollY > 10) {
+                header.classList.add('bg-black/70', 'backdrop-blur', 'border-b', 'border-white/10');
+            } else {
+                header.classList.remove('bg-black/70', 'backdrop-blur', 'border-b', 'border-white/10');
+            }
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll);
+
+        // Mobile drawer logic
+        const drawer = document.getElementById('mobile-drawer');
+        const panel = document.getElementById('drawer-panel');
+        const backdrop = document.getElementById('drawer-backdrop');
+        const btnOpen = document.getElementById('btn-open-drawer');
+        const btnClose = document.getElementById('btn-close-drawer');
+
+        function openDrawer() {
+            drawer.classList.remove('pointer-events-none', 'opacity-0');
+            backdrop.classList.remove('opacity-0');
+            panel.classList.remove('-translate-x-full');
+            btnOpen.setAttribute('aria-expanded', 'true');
+        }
+        function closeDrawer() {
+            drawer.classList.add('pointer-events-none', 'opacity-0');
+            backdrop.classList.add('opacity-0');
+            panel.classList.add('-translate-x-full');
+            btnOpen.setAttribute('aria-expanded', 'false');
+        }
+        btnOpen?.addEventListener('click', openDrawer);
+        btnClose?.addEventListener('click', closeDrawer);
+        backdrop?.addEventListener('click', closeDrawer);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+
+        // Contact form mock submit (API'n hazırsa /api/contact'e gönder)
+        const form = document.getElementById('contact-form');
+        const statusEl = document.getElementById('form-status');
+        form?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            statusEl.classList.remove('hidden');
+            try {
+                // Örnek gönderim: backend'in varsa aç
+                // const res = await fetch('/api/contact', { method:'POST', body: new FormData(form) });
+                // if (!res.ok) throw new Error();
+                await new Promise(r => setTimeout(r, 800)); // demo bekletme
+                statusEl.textContent = 'Teşekkürler! Mesajınız alındı.';
+                form.reset();
+            } catch {
+                statusEl.textContent = 'Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.';
+            } finally {
+                setTimeout(() => statusEl.classList.add('hidden'), 2500);
+            }
+        });
+    </script>
+</body>
+
+</html>
