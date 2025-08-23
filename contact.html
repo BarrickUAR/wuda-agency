@@ -359,64 +359,7 @@
     </footer>
     <!-- ===== /FOOTER SECTION ===== -->
 
-    <!-- ===== SCRIPTS ===== -->
-    <script>
-        // Header background on scroll
-        const header = document.getElementById('header');
-        const onScroll = () => {
-            if (window.scrollY > 10) {
-                header.classList.add('bg-black/70', 'backdrop-blur', 'border-b', 'border-white/10');
-            } else {
-                header.classList.remove('bg-black/70', 'backdrop-blur', 'border-b', 'border-white/10');
-            }
-        };
-        onScroll();
-        window.addEventListener('scroll', onScroll);
 
-        // Mobile drawer logic
-        const drawer = document.getElementById('mobile-drawer');
-        const panel = document.getElementById('drawer-panel');
-        const backdrop = document.getElementById('drawer-backdrop');
-        const btnOpen = document.getElementById('btn-open-drawer');
-        const btnClose = document.getElementById('btn-close-drawer');
-
-        function openDrawer() {
-            drawer.classList.remove('pointer-events-none', 'opacity-0');
-            backdrop.classList.remove('opacity-0');
-            panel.classList.remove('-translate-x-full');
-            btnOpen.setAttribute('aria-expanded', 'true');
-        }
-        function closeDrawer() {
-            drawer.classList.add('pointer-events-none', 'opacity-0');
-            backdrop.classList.add('opacity-0');
-            panel.classList.add('-translate-x-full');
-            btnOpen.setAttribute('aria-expanded', 'false');
-        }
-        btnOpen?.addEventListener('click', openDrawer);
-        btnClose?.addEventListener('click', closeDrawer);
-        backdrop?.addEventListener('click', closeDrawer);
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
-
-        // Contact form mock submit (API'n hazırsa /api/contact'e gönder)
-        const form = document.getElementById('contact-form');
-        const statusEl = document.getElementById('form-status');
-        form?.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            statusEl.classList.remove('hidden');
-            try {
-                // Örnek gönderim: backend'in varsa aç
-                // const res = await fetch('/api/contact', { method:'POST', body: new FormData(form) });
-                // if (!res.ok) throw new Error();
-                await new Promise(r => setTimeout(r, 800)); // demo bekletme
-                statusEl.textContent = 'Teşekkürler! Mesajınız alındı.';
-                form.reset();
-            } catch {
-                statusEl.textContent = 'Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.';
-            } finally {
-                setTimeout(() => statusEl.classList.add('hidden'), 2500);
-            }
-        });
-    </script>
 </body>
 
 </html>
