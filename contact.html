@@ -95,8 +95,6 @@
     </div>
     <!-- ===== /LOADING SCREEN ===== -->
 
-
-
     <!-- ===== HEADER SECTION ===== -->
     <header id="header" class="fixed w-full top-0 left-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-20">
@@ -142,7 +140,6 @@
         </div>
     </header>
     <!-- ===== /HEADER SECTION ===== -->
-
 
     <!-- ===== HAMBURGERMENU ===== -->
     <div id="mobile-drawer" class="fixed inset-0 z-[60] pointer-events-none opacity-0 transition-opacity duration-300"
@@ -343,9 +340,9 @@
                         Tasarım, yazılım ve büyüme—tek çatı altında. Performans odaklı projeler üretiyoruz.
                     </p>
                     <div class="flex gap-3 pt-2">
-                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Twitter</a>
-                        <a href="#" class="text-white/70 hover:text-[#ccff00]">Dribbble</a>
-                        <a href="#" class="text-white/70 hover:text-[#ccff00]">LinkedIn</a>
+                        <a href="https://www.instagram.com/wudagency/"
+                            class="text-white/70 hover:text-[#ccff00]">Instagram</a>
+
                     </div>
                 </div>
 
@@ -385,13 +382,115 @@
                     <script>document.write(new Date().getFullYear())</script> Wuda Ajans. Tüm hakları saklıdır.
                 </span>
                 <div class="flex gap-4">
-                    <a href="#" class="hover:text-white">Gizlilik</a>
-                    <a href="#" class="hover:text-white">Şartlar</a>
+                    <button data-modal="modal-satis" class="hover:text-white">Mesafeli Satış Sözleşmesi</button>
+                    <button data-modal="modal-gizlilik" class="hover:text-white">Gizlilik Politikası</button>
+                    <button data-modal="modal-kvkk" class="hover:text-white">KVKK</button>
                 </div>
             </div>
         </div>
     </footer>
     <!-- ===== /FOOTER SECTION ===== -->
+
+    <!-- ===== MODALS ===== -->
+    <div id="modal-satis" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
+        <div class="bg-[#151515] text-white max-w-2xl w-full rounded-2xl p-8 relative">
+            <button class="absolute top-3 right-3 text-white/70 hover:text-white close-modal">✕</button>
+            <h2 class="text-2xl font-bold mb-4">Mesafeli Satış Sözleşmesi</h2>
+            <div class="max-h-[60vh] overflow-y-auto space-y-4 text-white/70 text-sm leading-relaxed">
+
+                <p><strong>Madde 1 – Taraflar</strong><br />
+                    İşbu Mesafeli Satış Sözleşmesi (“Sözleşme”), bir tarafta <strong>Wuda Ajans</strong> (“Satıcı”),
+                    diğer tarafta elektronik ortamda siparişi onaylayan tüketici (“Alıcı”) arasında, 6502 sayılı
+                    Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği hükümleri çerçevesinde
+                    akdedilmiştir.</p>
+
+                <p><strong>Madde 2 – Konu</strong><br />
+                    Sözleşmenin konusu, Alıcı’nın Satıcı’ya ait internet sitesi üzerinden elektronik ortamda siparişini
+                    verdiği hizmetin/hizmetlerin satışı ve teslimine ilişkin hak ve yükümlülüklerin belirlenmesidir.</p>
+
+                <p><strong>Madde 3 – Hizmet Bedeli ve Ödeme</strong><br />
+                    Ürün ve/veya hizmetin satış bedeli, sipariş onayı öncesinde Alıcı’ya bildirilmiş olup, ödeme kredi
+                    kartı, havale/EFT veya online ödeme sistemleri aracılığıyla gerçekleştirilebilir.</p>
+
+                <p><strong>Madde 4 – Cayma Hakkı</strong><br />
+                    Alıcı, sözleşme konusu hizmetin ifasına başlanmamış olması halinde 14 (ondört) gün içinde cayma
+                    hakkına sahiptir. Cayma bildiriminin yazılı olarak veya kalıcı veri saklayıcısı ile Satıcı’ya
+                    iletilmesi gereklidir.</p>
+
+                <p><strong>Madde 5 – Uyuşmazlık</strong><br />
+                    İşbu sözleşmeden doğabilecek uyuşmazlıklarda, Ticaret Bakanlığı tarafından ilan edilen parasal
+                    sınırlara uygun olarak Alıcı’nın yerleşim yerindeki Tüketici Hakem Heyetleri ve Tüketici Mahkemeleri
+                    yetkilidir.</p>
+
+                <p><em>İşbu Sözleşme elektronik ortamda onaylanarak yürürlüğe girmiştir.</em></p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-gizlilik" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
+        <div class="bg-[#151515] text-white max-w-2xl w-full rounded-2xl p-8 relative">
+            <button class="absolute top-3 right-3 text-white/70 hover:text-white close-modal">✕</button>
+            <h2 class="text-2xl font-bold mb-4">Gizlilik Politikası</h2>
+            <div class="max-h-[60vh] overflow-y-auto space-y-4 text-white/70 text-sm leading-relaxed">
+
+                <p><strong>Veri Güvenliği</strong><br />
+                    Wuda Ajans olarak kişisel verilerinizi gizli tutmayı, üçüncü kişilerle paylaşmamayı ve yalnızca
+                    yürürlükteki mevzuata uygun olarak işlemeyi taahhüt ederiz. Tüm teknik ve idari tedbirler
+                    alınmaktadır.</p>
+
+                <p><strong>Toplanan Veriler</strong><br />
+                    İsim, soyisim, iletişim bilgileri, e-posta adresi, telefon numarası ve proje detayları tarafımızca
+                    işlenebilir. Bu veriler yalnızca hizmet sağlama, teklif hazırlama ve müşteri ilişkilerini yönetmek
+                    amacıyla kullanılmaktadır.</p>
+
+                <p><strong>Çerez Kullanımı</strong><br />
+                    Web sitemizde kullanıcı deneyimini geliştirmek için çerezlerden faydalanılmaktadır. Çerez
+                    ayarlarınızı dilediğiniz zaman tarayıcınızdan değiştirebilirsiniz.</p>
+
+                <p><strong>Veri Saklama Süresi</strong><br />
+                    Kişisel verileriniz, yasal yükümlülükler kapsamında gerekli süre boyunca saklanır ve sürenin
+                    dolmasıyla güvenli yöntemlerle silinir.</p>
+
+                <p><strong>İletişim</strong><br />
+                    Gizlilik politikamızla ilgili tüm sorular için <strong>wudagency@gmail.com</strong> adresinden bize
+                    ulaşabilirsiniz.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-kvkk" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
+        <div class="bg-[#151515] text-white max-w-2xl w-full rounded-2xl p-8 relative">
+            <button class="absolute top-3 right-3 text-white/70 hover:text-white close-modal">✕</button>
+            <h2 class="text-2xl font-bold mb-4">KVKK Aydınlatma Metni</h2>
+            <div class="max-h-[60vh] overflow-y-auto space-y-4 text-white/70 text-sm leading-relaxed">
+
+                <p><strong>Veri Sorumlusu</strong><br />
+                    6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, kişisel verilerinizin veri
+                    sorumlusu <strong>Wuda Ajans</strong>’tır.</p>
+
+                <p><strong>Kişisel Verilerin İşlenme Amaçları</strong><br />
+                    Tarafımıza iletmiş olduğunuz kişisel verileriniz; müşteri ilişkilerinin yürütülmesi, proje
+                    tekliflerinin hazırlanması, hizmetin ifası ve yasal yükümlülüklerin yerine getirilmesi amaçlarıyla
+                    işlenmektedir.</p>
+
+                <p><strong>Aktarım</strong><br />
+                    Kişisel verileriniz, yalnızca yasal zorunluluklar veya açık rızanız dahilinde yurtiçinde ve
+                    yurtdışında iş ortaklarımızla paylaşılabilir.</p>
+
+                <p><strong>Haklarınız</strong><br />
+                    KVKK’nın 11. maddesi gereğince; verilerinizin işlenip işlenmediğini öğrenme, düzeltilmesini talep
+                    etme, silinmesini veya yok edilmesini isteme, işlenmesine itiraz etme haklarına sahipsiniz.</p>
+
+                <p><strong>Başvuru</strong><br />
+                    Haklarınızı kullanmak için <strong>wudagency@gmail.com</strong> adresine yazılı başvuruda
+                    bulunabilirsiniz.</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- ===== /MODALS ===== -->
 
 
 

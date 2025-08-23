@@ -452,6 +452,34 @@ const testimonialsSwiper = new Swiper('#testimonials-swiper', {
 });
 // Testimonials Swiper
 
-// Contact PAGE
 
-// Contact PAGE
+// Modal
+const modalButtons = document.querySelectorAll('[data-modal]');
+const modals = document.querySelectorAll('[id^="modal-"]');
+const closeBtns = document.querySelectorAll('.close-modal');
+
+modalButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.modal);
+        target.classList.remove('hidden');
+        target.classList.add('flex');
+    });
+});
+
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('[id^="modal-"]').classList.add('hidden');
+        btn.closest('[id^="modal-"]').classList.remove('flex');
+    });
+});
+
+// backdrop’a tıklayınca kapanma
+modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    });
+});
+// Modal 

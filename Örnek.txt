@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title and SEO -->
-    <title>Wuda Agency - Design, Engineering & Growth</title>
+    <title>Hakkımızda - Wuda Agency</title>
     <meta name="description"
         content="Wuda Agency - Design, engineering and growth—under one roof. We ship products that perform. Trusted by forward-thinking brands worldwide.">
     <meta name="keywords" content="Wuda Agency, Web Design, Software Development, Branding, UI/UX, SEO, Digital Agency">
@@ -142,7 +142,6 @@
     </header>
     <!-- ===== /HEADER SECTION ===== -->
 
-
     <!-- ===== HAMBURGERMENU ===== -->
     <div id="mobile-drawer" class="fixed inset-0 z-[60] pointer-events-none opacity-0 transition-opacity duration-300"
         aria-hidden="true">
@@ -204,7 +203,6 @@
         </aside>
     </div>
     <!-- ===== /HAMBURGERMENU ===== -->
-
 
     <!-- ABOUT SECTION -->
     <main>
@@ -386,7 +384,6 @@
         </section>
     </main>
     <!-- /ABOUT SECTION -->
-
 
     <!-- ===== FOOTER SECTION ===== -->
     <footer class="bg-black text-white border-t border-white/10">
